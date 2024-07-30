@@ -1,0 +1,15 @@
+.home {
+    display: flex;
+  }
+
+  .main-content {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .character-selection {
+    display: flex;
+    gap: 15px;
+  }
+  
+  

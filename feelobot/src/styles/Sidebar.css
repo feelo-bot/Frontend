@@ -1,0 +1,42 @@
+.sidebar {
+    width: 130px;
+    background-color: #EEF1FD;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+  }
+  
+  .sidebar h2 {
+    margin: 0 0 20px 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .sidebar .nested-item {
+    padding-left: 10px;
+  }
+  .sidebar-logo {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 150px; 
+    height: 150px; 
+    margin: 0;
+    padding: 0;
+}
