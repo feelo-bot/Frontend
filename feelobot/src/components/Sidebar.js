@@ -34,7 +34,7 @@ function Sidebar() {
               .filter(character => character.chatRoomCreated) // Filter characters with chatRoomCreated as true
               .map((character, index) => (
                 <li className="nested-item" key={index}>
-                  <NavLink to={`/chatbot?name=${encodeURIComponent(character.name)}`} className={location.pathname === `/chatbot` ? 'active' : ''}>
+                  <NavLink to={`/chatting?name=${encodeURIComponent(character.name)}`} className={location.pathname === `/chatbot` ? 'active' : ''}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <img src={character.img} alt={character.name} style={{ width: '25px', height: '25px', marginRight: '10px', borderRadius: '50%' }} />
                   {character.name}
