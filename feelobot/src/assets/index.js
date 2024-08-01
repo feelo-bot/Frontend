@@ -1,5 +1,6 @@
 const index = [
-    {num : 0,  
+    {num : 0, 
+    name : "나연"
     }
 ];
 
