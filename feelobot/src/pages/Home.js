@@ -10,7 +10,7 @@ function Home() {
     <div className="home">
       <Sidebar />
       <main className="main-content">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', paddingLeft:'10px'}}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', left : '10px'}}>
         <img src={robot} alt="로봇" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
         <h1>캐릭터 선택하기</h1>
         </div>

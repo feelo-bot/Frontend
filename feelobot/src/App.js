@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Chatbot from './pages/Chatbot';
 import './styles/global.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/chatbot" element={<div>Chatbot Page</div>} />
+          <Route path="/chatbot" element={<Chatbot/ >} />
         </Routes>
       </div>
     </Router>
