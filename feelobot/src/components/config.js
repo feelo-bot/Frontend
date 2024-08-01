@@ -1,48 +1,58 @@
-// config.js
 import { createChatBotMessage } from "react-chatbot-kit";
 import chattingData from '../assets/chattingData';
+import characterData from '../assets/characterData';
 
-// 랜덤으로 항목을 선택하는 함수
-function getRandomChattingData() {
-  const randomIndex = Math.floor(Math.random() * chattingData.length);
-  return chattingData[randomIndex];
-}
-
-// 랜덤으로 선택된 대화 데이터 가져오기
-const randomData = getRandomChattingData();
-
-// 항목을 배열로 만들어서 무작위로 섞기
-const options = [
-  randomData.answer,
-  randomData.wrong1,
-  randomData.wrong2
-];
-
-// 배열을 무작위로 섞는 함수
-function shuffleArray(array) {
-  let currentIndex = array.length, randomIndex;
-
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+// Function to create the config object based on the index
+const createConfig = (index) => {
+  // Ensure index is within bounds
+  if (index < 0 || index >= chattingData.length) {
+    throw new Error('Index out of bounds');
   }
 
-  return array;
-}
+  // Get data based on index
+  const data = chattingData[index];
+  
+  // Options array
+  const options = [
+    data.answer,
+    data.wrong1,
+    data.wrong2
+  ];
+  
+  // Shuffle options
+  function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
 
-// 무작위로 섞인 옵션 배열
-const shuffledOptions = shuffleArray(options);
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
 
-// 초기 메시지 생성
-const initialMessage = createChatBotMessage(
-  `💬 ${randomData.situation}\n${shuffledOptions.join('\n')}`,
-);
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
 
-const config = {
-  botName: "ChatBot",
-  initialMessages: [initialMessage],
+    return array;
+  }
+
+  const shuffledOptions = shuffleArray(options);
+
+  // Add numbers before each option
+  const numberedOptions = shuffledOptions.map((option, idx) => `${idx + 1}. ${option}`);
+
+  // Create initial messages
+  const initialMessages = [
+    createChatBotMessage(`💬 ${data.situation}`)
+  ];
+
+  // Add each option as a separate message
+  numberedOptions.forEach(option => {
+    initialMessages.push(createChatBotMessage(option));
+  });
+
+  // Return the config object
+  return {
+    botName: "ChatBot",
+    initialMessages: initialMessages,
+  };
 };
 
-export default config;
+export default createConfig;

@@ -16,92 +16,81 @@
     align-items: center;
 }
 
-.chat-container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
-    width: 100%;
-    margin-top: 20px;
+.react-chatbot-kit-chat-container {
+    width: 300px;
+   
 }
 
-.chat p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.5;
+.react-chatbot-kit-chat-inner-container {
+    
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.react-chatbot-kit-chat-header {
+    
 }
 
-.options button {
-    padding: 12px;
-    border: none;
-    background-color: #007bff;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.react-chatbot-kit-chat-input-container {
 }
 
-.options button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.react-chatbot-kit-chat-message-container {
 }
 
-.feedback {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    white-space: pre-wrap;  /* Preserve line breaks in feedbackMessage */
+.react-chatbot-kit-chat-input {
 }
 
-.feedback.correct {
-    border: 2px solid #4caf50;
-    background-color: #e8f5e9;
+.react-chatbot-kit-chat-input-form {
 }
 
-.feedback.incorrect {
-    border: 2px solid #f44336;
-    background-color: #fce4ec;
+.react-chatbot-kit-chat-input::placeholder {
 }
 
-.feedback img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.react-chatbot-kit-chat-btn-send {
 }
 
-.feedback p {
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    line-height: 1.5;
+.react-chatbot-kit-chat-btn-send-icon {
 }
 
-.feedback button {
-    padding: 12px 25px;
-    border: none;
-    background-color: #007bff;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: center;
+.react-chatbot-kit-chat-bot-message-container {
 }
 
-.feedback button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.react-chatbot-kit-chat-bot-avatar-container {
+}
+
+.react-chatbot-kit-chat-bot-avatar-icon {
+}
+
+.react-chatbot-kit-chat-bot-avatar-letter {
+}
+
+.react-chatbot-kit-chat-bot-message {
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+}
+
+.react-chatbot-kit-chat-bot-loading-icon-container {
+}
+
+.chatbot-loader-container {
+}
+
+#chatbot-loader #chatbot-loader-dot1 {
+}
+
+#chatbot-loader #chatbot-loader-dot2 {
+}
+
+#chatbot-loader #chatbot-loader-dot3 {
+}
+
+.react-chatbot-kit-error {
+}
+
+.react-chatbot-kit-error-container {
+}
+
+.react-chatbot-kit-error-header {
+}
+
+.react-chatbot-kit-error-docs {
 }

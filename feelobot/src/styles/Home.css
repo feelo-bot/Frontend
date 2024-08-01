@@ -1,13 +1,13 @@
 .home {
-    display: flex;
-  }
-  .main-content {
-    padding: 20px;
-  }
-  
-  .character-selection {
-    display: flex;
-    gap: 15px;
-  }
-  
-  
+  display: flex;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.character-selection {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures wrapping of items */
+}
